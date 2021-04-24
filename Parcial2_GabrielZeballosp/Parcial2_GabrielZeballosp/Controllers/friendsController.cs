@@ -17,12 +17,14 @@ namespace Parcial2_GabrielZeballosp.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/friends
+        [Authorize]
         public IQueryable<friend> Getfriends()
         {
             return db.friends;
         }
 
         // GET: api/friends/5
+        [Authorize]
         [ResponseType(typeof(friend))]
         public IHttpActionResult Getfriend(int id)
         {
@@ -36,6 +38,7 @@ namespace Parcial2_GabrielZeballosp.Controllers
         }
 
         // PUT: api/friends/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult Putfriend(int id, friend friend)
         {
@@ -71,6 +74,7 @@ namespace Parcial2_GabrielZeballosp.Controllers
         }
 
         // POST: api/friends
+        [Authorize]
         [ResponseType(typeof(friend))]
         public IHttpActionResult Postfriend(friend friend)
         {
@@ -86,6 +90,7 @@ namespace Parcial2_GabrielZeballosp.Controllers
         }
 
         // DELETE: api/friends/5
+        [Authorize]
         [ResponseType(typeof(friend))]
         public IHttpActionResult Deletefriend(int id)
         {
