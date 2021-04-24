@@ -8,8 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Parcial2_GabrielZeballosp.Models;
 
-namespace Parcial2_GabrielZeballosp.Models
+namespace Parcial2_GabrielZeballosp.Controllers
 {
     public class friendsController : ApiController
     {
